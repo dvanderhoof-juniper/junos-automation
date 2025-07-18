@@ -19,7 +19,7 @@ Note that the minimum tested version is JunOS 21.4R3-S5.
 
 ### [interface-status.py](interface-status.py) 
 
-A JunOS-ified version of the Cisco and Arista "show interface status command" for switches.
+A JunOS-ified version of the Cisco and Arista "show interface status" command for switches.
 
 This script attempts to resolve the negotiatied link speed and state first.  If this is not available, it will fall back to the interface link speed.
 
