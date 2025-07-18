@@ -92,11 +92,11 @@ To remotely execute the script, pass in the following environment variables
 
 ## Maintainers
 
-[@dvanderhoof_JNPR](https://github.com/dvanderhoof_JNPR)
+[@dvanderhoof-juniper](https://github.com/dvanderhoof-juniper)
 
 ## Contributing
 
-Feel free to [Open an issue](https://github.com/dvanderhoof_JNPR/junos-automation/issues/new) or submit PRs.
+Feel free to [Open an issue](https://github.com/dvanderhoof-juniper/junos-automation/issues/new) or submit PRs.
 
 ## License
 
