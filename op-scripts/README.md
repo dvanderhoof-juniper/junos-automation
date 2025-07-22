@@ -33,7 +33,7 @@ Pure layer 3 (family inet or inet6) interfaces will be displayed as routed, also
 #### Example Output 
 
 ``` 
-dylanv@semaphore.com@crsw1.sea1.semaphore.net> op interface-status
+dylanv@crsw1> op interface-status
 Int           Status    Mode      VLAN   Duplex  Speed       Media               Description
 ge-0/0/0      up/down   access    14     Full    1000 Mbps   SFP-LX10            Down fiber access port
 ge-0/0/4      up/up     access    31     Full    1000 Mbps   SFP-LH              Up fiber access port
@@ -53,6 +53,36 @@ ae13          up/up     trunk                    1Gbps                          
 ae14          up/down   access    18                                             Down LACP bundle
 ae15          up/up                              80 Gbps                         Up fiber LACP bundle - service provider
 ae16          up/up                              80 Gbps                         Up fiber LACP bundle - service provider
+```
+
+### [ethernet-statistics.py](ethernet-statistics.py) 
+
+An op script to display TX and RX packets for unicast, multicast and broadcast on a physical interface.
+
+LACP interfaces will display the parent, but individual memeber statistics will be given.
+
+The script does not attempt to separate switched or routed interfaces, and will display statistics for interfaces that are currently down.
+
+
+#### Example Output 
+
+``` 
+mist@Theater-EX4100-F-12P> op ethernet-statistics 
+Interface         AE    Unicast RX        Unicast TX        Broadcast RX      Broadcast TX      Multicast RX      Multicast TX      
+ge-0/0/0                3957              10005             8261              181               243               11805             
+ge-0/0/1                505435549         67829026          1234              10699841          74431             14750438          
+ge-0/0/2                1601866           1120320           15032             22052145          4028241           15107533          
+ge-0/0/3                19526894          80796704          252               22064925          122615            19011534          
+ge-0/0/4                2094391602        1748661015        3444226           18961522          818007            18550263          
+ge-0/0/5                23068066          24414945          585000            21823064          736687            18659651          
+ge-0/0/6          ae0   0                 122               6                 1654              90327             137479            
+ge-0/0/7          ae0   0                 20                5890              2717              90314             127115            
+ge-0/0/8                2493111848        2404471822        304635            22244427          4864592           16077159          
+ge-0/0/9                2370877733        2479524039        27                0                 10                2534603           
+ge-0/0/10               320684580         854266677         2295157           20253489          2214112           18854252          
+ge-0/0/11               14707536          11893610          71                22407456          162495            19371205          
+mge-0/2/0               2598641736        2770416285        1358034           21190223          870130            20144768          
+mge-0/2/1               0                 7020              0                 152958            0                 291562  
 ```
 
 ## Install
